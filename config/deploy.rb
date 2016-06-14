@@ -2,7 +2,7 @@
 # @Date:   2016-06-14T20:48:54+03:00
 # @Email:  ronnienyaga@gmail.com
 # @Last modified by:   Ronnie
-# @Last modified time: 2016-06-14T21:44:01+03:00
+# @Last modified time: 2016-06-14T22:30:21+03:00
 
 
 
@@ -60,7 +60,7 @@
 # Change these
 server '54.69.61.200', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'https://Einnor@bitbucket.org/Einnor/pika_rails.git'
+set :repo_url,        'einnor@bitbucket.org/einnor/pika_rails.git'
 set :application,     'Pika'
 set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
