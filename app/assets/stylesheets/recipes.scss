@@ -1,0 +1,54 @@
+// @Author: Ronnie Nyaga <Ronnie>
+// @Date:   2016-06-11T20:28:57+03:00
+// @Email:  ronnienyaga@gmail.com
+// @Last modified by:   Ronnie
+// @Last modified time: 2016-06-14T17:24:58+03:00
+
+
+
+// Place all the styles related to the recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$red: #DB6161;
+
+#recipes {
+  margin: 0 auto;
+  width: 100%;
+  .box {
+	  margin: 10px;
+	  width: 350px;
+	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	  border-radius: 7px;
+	  text-align: center;
+    overflow: hidden;
+	  img {
+	  	width: 100%;
+	  	height: auto;
+      -webkit-transition: all .3s ease-out;
+   	  -moz-transition: all .3s ease-out;
+   	  -o-transition: all .3s ease-out;
+       transition: all .3s ease-out;
+   		&:hover {
+   			transform: scale(1.075);
+   		}
+	  }
+	  h2 {
+	  	font-size: 22px;
+	  	margin: 0;
+	  	padding: 25px 10px;
+	  	a {
+				color: $red;
+        &:hover{
+          text-decoration: none;
+        }
+	  	}
+	  }
+	  .user {
+	  	font-size: 12px;
+	  	border-top: 1px solid #EAEAEA;
+			padding: 15px;
+			margin: 0;
+	  }
+	}
+}

@@ -1,0 +1,7 @@
+.form-inline.clearfix
+  .nested-fields
+    .row
+      .col-md-9
+        = f.input :step, input_html: { class: "form-input form-control" }
+      .col-md-3
+        = link_to_remove_association "Remove", f, class: "btn btn-default"

@@ -1,0 +1,47 @@
+= simple_form_for(@recipe, html: { multipart: true }) do |f|
+  - if @recipe.errors.any?
+    #errors
+      %p
+      = pluralize(@recipe.errors.count, 'error')
+      Prevented this recipe from saving
+    %ul
+      - @recipe.errors.full_messages.each do |msg|
+        %li= msg
+  -# :name, :preptime, :authorsTip, :servings, :servingTypeID, :price, :story
+  .panel-body
+    .row
+      .col-md-6
+        = f.hidden_field :serving_type_id, :id => 'serving_type_id'
+        = f.input :name, input_html: {class: 'form-control'}
+        = f.input :preptime, input_html: {class: 'form-control'}
+        = f.label :serving_type
+        = f.autocomplete_field :serving_type, autocomplete_serving_type_name_recipes_path, class: "form-control", :id_element => '#serving_type_id'
+        = f.input :servings, input_html: {class: 'form-control'}
+        = f.input :price, input_html: {class: 'form-control'}
+        = f.input :cover, input_html: {class: 'form-control'}
+      .col-md-6
+        = f.input :story, input_html: {class: 'form-control', rows: 6}
+        = f.label :authorsTip
+        = f.text_area :authorsTip, class: 'form-control', rows: 5
+        = f.input :tags, input_html:{class: 'form-control', data: {role:'tagsinput'}}
+
+
+    .row
+      .col-md-12
+        %h3 Ingredients
+        #ingredients
+          = f.simple_fields_for :recipe_ingredients do |recipe_ingredient|
+            = render 'recipe_ingredient_fields', f: recipe_ingredient
+          .links
+            = link_to_add_association 'Add Ingredient', f, :recipe_ingredients, class: "btn btn-default add-button"
+
+      .col-md-12
+        %h3 Directions
+        #directions
+          = f.simple_fields_for :recipe_steps do |recipe_step|
+            = render 'recipe_step_fields', f: recipe_step
+          .links
+            = link_to_add_association 'Add Step', f, :recipe_steps, class: "btn btn-default add-button"
+
+
+  = f.button :submit, class: "btn btn-primary"

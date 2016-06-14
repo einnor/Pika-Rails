@@ -1,0 +1,39 @@
+# @Author: Ronnie Nyaga <Ronnie>
+# @Date:   2016-06-11T20:28:57+03:00
+# @Email:  ronnienyaga@gmail.com
+# @Last modified by:   Ronnie
+# @Last modified time: 2016-06-11T21:11:29+03:00
+
+
+# MySQL.  Versions 5.0+ are recommended.
+#
+# Install the MYSQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: secret
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: pika
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: pika_test
+
+production:
+  <<: *default
+  database: pika_production

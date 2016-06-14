@@ -1,0 +1,14 @@
+.form-inline.clearfix
+  .nested-fields
+    .row
+      .col-md-3
+        = f.hidden_field :ingredient_id, :id => 'ingredient_id'
+        = f.autocomplete_field :ingredient, autocomplete_l_ingredient_name_recipes_path, class: "form-input form-control", :id_element => '#ingredient_id'
+        %label Ingredient
+      .col-md-3
+        -# = f.input :ingredient_id, input_html: { class: "form-input form-control" }
+        = f.input :quantity, input_html: { class: "form-input form-control" }
+      .col-md-3
+        = f.input :measure, input_html: { class: "form-input form-control" }
+      .col-md-3
+        = link_to_remove_association "Remove", f, class: "btn btn-default"

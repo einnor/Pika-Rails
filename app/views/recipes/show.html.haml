@@ -1,0 +1,65 @@
+#recipe_top.row
+  .col-md-4
+    = image_tag @recipe.cover.url(:medium), class: "recipe_image"
+  .col-md-8
+    .row#recipe_info
+      %h1= @recipe.name
+      .col-md-7
+        %p.text-justify= @recipe.story
+        %h3 Author's Tip
+        %p.text-justify= @recipe.authorsTip
+        %p
+          Submitted by
+          = @recipe.user.email
+      .col-md-5
+        %p
+          Preparation Time:
+          = @recipe.preptime
+          Minutes
+        %p
+          Servings:
+          = pluralize(@recipe.servings, @recipe.serving_type)
+        %p
+          Price: Ksh.
+          = @recipe.price
+        %h2 Tags
+        %p.text-justify
+          - if @recipe.tags.nil?
+            No tags have been specified
+          - else
+            - @recipe.tags.split(",").each do |tag|
+              %span.label.label-info
+                = tag
+
+.row
+  .col-md-12
+    #ingredients
+      %h2 Ingredients
+      %table.table.table-hover
+        %thead
+          %tr
+            %th
+              Ingredient
+            %th
+              Quantity
+            %th
+              Measure
+        %tbody
+          - @recipe.recipe_ingredients.each do |ingredient|
+            %tr
+              %td= ingredient.ingredient
+              %td= ingredient.quantity
+              %td= ingredient.measure
+
+  .col-md-12
+    #directions
+      %h2 Directions
+      %ul
+        - @recipe.recipe_steps.each do |step|
+          %li= step.step
+
+.row
+  .col-md-12
+    = link_to "Back", root_path, class: "btn btn-default"
+    = link_to "Edit", edit_recipe_path, class: "btn btn-default"
+    = link_to "Delete", recipe_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
