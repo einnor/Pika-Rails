@@ -2,7 +2,7 @@
 # @Date:   2016-06-14T20:48:54+03:00
 # @Email:  ronnienyaga@gmail.com
 # @Last modified by:   Ronnie
-# @Last modified time: 2016-06-14T20:53:40+03:00
+# @Last modified time: 2016-06-14T21:34:32+03:00
 
 
 
@@ -58,11 +58,11 @@
 
 
 # Change these
-server '54.69.16.299', port: your_port_num, roles: [:web, :app, :db], primary: true
+server '54.69.16.200', port: your_port_num, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@example.com:username/appname.git'
-set :application,     'appname'
-set :user,            'deploy'
+set :repo_url,        'https://Einnor@bitbucket.org/Einnor/pika_rails.git'
+set :application,     'Pika'
+set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
