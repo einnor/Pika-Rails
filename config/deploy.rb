@@ -2,7 +2,7 @@
 # @Date:   2016-06-14T20:48:54+03:00
 # @Email:  ronnienyaga@gmail.com
 # @Last modified by:   Ronnie
-# @Last modified time: 2016-06-14T21:38:04+03:00
+# @Last modified time: 2016-06-14T21:40:37+03:00
 
 
 
@@ -58,7 +58,7 @@
 
 
 # Change these
-server '54.69.16.200', port: 8080, roles: [:web, :app, :db], primary: true
+server '54.69.16.200', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'https://Einnor@bitbucket.org/Einnor/pika_rails.git'
 set :application,     'Pika'
