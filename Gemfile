@@ -44,8 +44,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'devise', '~> 4.1', '>= 4.1.1'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-# MySQL
-gem 'mysql2', '~> 0.4.4'
 # Autocomplete
 gem 'rails4-autocomplete', '~> 1.1', '>= 1.1.1'
 #Jquery UI rails
@@ -66,8 +64,8 @@ gem 'masonry-rails', '~> 0.2.4'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  # MySQL
+  gem 'mysql2', '~> 0.4.4'
 end
 
 group :development do
