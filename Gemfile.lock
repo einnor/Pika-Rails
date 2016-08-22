@@ -134,6 +134,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.4)
     pkg-config (1.1.7)
     puma (3.4.0)
     rack (1.6.4)
@@ -234,6 +235,7 @@ DEPENDENCIES
   masonry-rails (~> 0.2.4)
   mysql2 (~> 0.4.4)
   paperclip (~> 4.3, >= 4.3.6)
+  pg
   puma
   rails (= 4.2.6)
   rails4-autocomplete (~> 1.1, >= 1.1.1)
