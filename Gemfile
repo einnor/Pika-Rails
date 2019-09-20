@@ -37,7 +37,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # Upload images
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 # Bootstrap sass
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'bootstrap-sass', '~> 3.4'
 # Nested forms using cocoon
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 # Manage user accounts
