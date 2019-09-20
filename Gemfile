@@ -41,7 +41,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Nested forms using cocoon
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 # Manage user accounts
-gem 'devise', '~> 4.1', '>= 4.1.1'
+gem 'devise', '~> 4.7'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Autocomplete
