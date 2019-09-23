@@ -35,7 +35,7 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 # Forms made easy
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # Upload images
-gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem 'paperclip', '~> 5.2'
 # Bootstrap sass
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Nested forms using cocoon
