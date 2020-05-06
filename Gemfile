@@ -47,7 +47,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Autocomplete
 gem 'rails4-autocomplete', '~> 1.1', '>= 1.1.1'
 #Jquery UI rails
-gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+gem 'jquery-ui-rails', '~> 6.0'
 # Tags UI
 gem 'bootstrap-tagsinput-rails', '~> 0.4.2.1'
 # Masonry will rock your world!
